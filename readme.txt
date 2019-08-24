@@ -4,7 +4,7 @@ Copyright (C) Albano Toska
 Tags: image hover effects for wpbakery page builder, image caption hover for wpbakery page builder, visual composer image hover effects css3, wpbakery page builder, visual composer, amazing hover effects, best hover effect plugin, css3 animations, css3 hover effect, css3 transition, hover, hover effect, hover effect wordpress plugin, image caption, image caption hover, image hover, pure css3 effects, wp image caption
 Requires at least: 3.5
 Tested up to: 5.2.2
-Stable tag: 1.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -19,11 +19,11 @@ Wordpress Shortcode that will allow user to add 10 hover effects to images with 
 </blockquote>
 BS Banners is a Wordpress plugin that adds 10 different Banners, with Title, description, link and Image. It is also compatible with WPBakery Page Builder(formerly Visual Composer). You can find the element on the builder named "BS Banners". It is compatible with TinyMCE Wordpress Editor. You Should find a button element that adds the shortcode and asks for atributes to be inputed!<br>
 
-<h3>Qucik Links</h3> 
+<h3>Quick Links</h3> 
 <ul>
     <li><a href="https://albanotoska.com/banner-plugin/">Demo (Features)</a></li>
     <li><a href="https://albanotoska.com/#contact">Contact Us</a></li>
-    <li><a href="https://wordpress.org/plugins/bunny-shortcode/">Plugin on Wordpress.org</a></li>
+    <li><a href="https://wordpress.org/plugins/bs-banners/">Plugin on Wordpress.org</a></li>
 </ul>
 
 <ul>
