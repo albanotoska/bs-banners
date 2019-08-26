@@ -29,6 +29,7 @@ BS Banners is a Wordpress plugin that adds 10 different Banners, with Title, des
 <ul>
     <li>10 Hover Effects(More to come)</li>
     <li>Pure CSS Animations</li>
+    <li>WPBakery(formerly Visual Composer) and Elementor full Support</li>
     <li>Super easy Installation</li>
     <li>Image Upload from media</li>
     <li>External link for each hover item</li>
