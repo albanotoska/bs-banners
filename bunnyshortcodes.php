@@ -1,9 +1,9 @@
 <?php
 /**
  * Plugin Name: BS Banners
- * Description: Different banner style shortcodes, with awesome effects. Compatible with VisualComposer and wordpress editor. Just add shortcode [bunnyshortcode style="" title="" title2="" url="" img=""], or simply add the element via Visual Composer.
+ * Description: Different banner style shortcodes, with awesome effects. Compatible with VisualComposer and wordpress editor. Just add shortcode [bs_banner style="" title="" title2="" url="" img=""], or simply add the element via Visual Composer.
  * Plugin URI: https://albanotoska.com/banner-plugin/
- * Version: 1.0
+ * Version: 1.1
  * Author: Albano Toska
  * Author URI: http://www.albanotoska.com
  * License:     GPL2
