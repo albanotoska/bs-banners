@@ -53,3 +53,6 @@ BS Banners is a Wordpress plugin that adds 10 different Banners, with Title, des
 
 = 1.0 =
 * Initial Release
+
+= 1.1 =
+* Fixed description error
