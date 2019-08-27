@@ -227,5 +227,6 @@ class BS_Banner_Elementor_Widget extends \Elementor\Widget_Base {
     }
 
 }
-\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new BS_Banner_Elementor_Widget() );
-?>
+add_action( 'elementor/widgets/widgets_registered', function() {
+    \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new BS_Banner_Elementor_Widget() );
+} );
