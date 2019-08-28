@@ -66,7 +66,7 @@ BS Banners is a Wordpress plugin that adds 10 different Banners, with Title, des
 * Little changes on banner styles(New banners coming soon)
 
 = 2.0.2 =
-*Fixed a bug for Elementor
+* Fixed a bug for Elementor
 
 = 2.0.3 =
-*WPBakery conditionals and optimization
+* WPBakery conditionals and optimization
