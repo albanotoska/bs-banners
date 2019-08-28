@@ -4,7 +4,7 @@ Copyright (C) Albano Toska
 Tags: image hover effects for wpbakery page builder, image caption hover for wpbakery page builder, visual composer image hover effects css3, wpbakery page builder, visual composer, amazing hover effects, best hover effect plugin, css3 animations, css3 hover effect, css3 transition, hover, hover effect, hover effect wordpress plugin, image caption, image caption hover, image hover, pure css3 effects, wp image caption
 Requires at least: 3.5
 Tested up to: 5.2.2
-Stable tag: 2.0.2
+Stable tag: 2.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -44,7 +44,9 @@ BS Banners is a Wordpress plugin that adds 10 different Banners, with Title, des
 
 1. Go to plugins in your dashboard and select 'add new'.
 2. Search for 'BS Banner Shortcodes and install it.
-3. Go to Pages or Posts and there you should find add shortcode in TinyMCE editor, or you can add shortcode manually [bs_banner style="" title="" title2="" url="" img=""]. Alternatively if you have WPBakery Page Builder(formerly Visual Composer) you can add as a new element. It can be found on category "BS BANNERS".
+3. Go to Pages or Posts and there you should find add shortcode in TinyMCE editor, or you can add shortcode manually [bs_banner style="" title="" title2="" url="" img=""]. Alternatively :
+	- If you have WPBakery Page Builder(formerly Visual Composer) you can add as a new element. It can be found on category "BS BANNERS".
+	- If you have Elementor Page Builder you can add as a new element. It is called "BS BANNERS".
 
 == Screenshots ==
 
@@ -65,3 +67,6 @@ BS Banners is a Wordpress plugin that adds 10 different Banners, with Title, des
 
 = 2.0.2 =
 *Fixed a bug for Elementor
+
+= 2.0.3 =
+*WPBakery conditionals and optimization

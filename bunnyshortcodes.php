@@ -1,9 +1,9 @@
 <?php
 /**
  * Plugin Name: BS Banners
- * Description: Different banner style shortcodes, with awesome effects. Compatible with VisualComposer(WPBakery), Elementor and Wordpress editor. Just add shortcode [bs_banner style="" title="" title2="" url="" img=""], or simply add the element via Visual Composer or Elementor.
+ * Description: Different banner style shortcodes, with awesome effects. Compatible with Visual Composer(WPBakery), Elementor and Wordpress editor. Just add shortcode [bs_banner style="" title="" title2="" url="" img=""], or simply add the element via Visual Composer or Elementor.
  * Plugin URI: https://albanotoska.com/banner-plugin/
- * Version: 2.0.2
+ * Version: 2.0.3
  * Author: Albano Toska
  * Author URI: http://www.albanotoska.com
  * License:     GPL2
