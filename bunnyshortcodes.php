@@ -1,9 +1,9 @@
 <?php
 /**
  * Plugin Name: BS Banners
- * Description: Different banner style shortcodes, with awesome effects. Compatible with Visual Composer(WPBakery), Elementor and Wordpress editor. Just add shortcode [bs_banner style="" title="" title2="" url="" img=""], or simply add the element via Visual Composer or Elementor.
+ * Description: 20 Different banner style shortcodes, with awesome effects. Compatible with Visual Composer(WPBakery), Elementor and Wordpress editor. Just add shortcode [bs_banner style="" title="" title2="" url="" img=""], or simply add the element via Visual Composer or Elementor.
  * Plugin URI: https://albanotoska.com/banner-plugin/
- * Version: 2.0.3
+ * Version: 3.0.0
  * Author: Albano Toska
  * Author URI: http://www.albanotoska.com
  * License:     GPL2
@@ -56,6 +56,36 @@ function bs_banner_shortcode( $atts ) {
         }
         if($style=='10') {
         include('templates/banner-sample-10.php');
+        }
+        if($style=='11') {
+        include('templates/banner-sample-11.php');
+        }
+        if($style=='12') {
+        include('templates/banner-sample-12.php');
+        }
+        if($style=='13') {
+        include('templates/banner-sample-13.php');
+        }
+        if($style=='14') {
+        include('templates/banner-sample-14.php');
+        }
+        if($style=='15') {
+        include('templates/banner-sample-15.php');
+        }
+        if($style=='16') {
+        include('templates/banner-sample-16.php');
+        }
+        if($style=='17') {
+        include('templates/banner-sample-17.php');
+        }
+        if($style=='18') {
+        include('templates/banner-sample-18.php');
+        }
+        if($style=='19') {
+        include('templates/banner-sample-19.php');
+        }
+        if($style=='20') {
+        include('templates/banner-sample-20.php');
         }
       return ob_get_clean();
     }

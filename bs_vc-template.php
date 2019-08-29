@@ -48,7 +48,17 @@ class bs_banner_vc_element extends WPBakeryShortCode {
                         '7' => '7',
                         '8'  => '8',
                         '9'   => '9',
-                        '10'   => '10'
+                        '10'   => '10',
+                        '11'   => '11',
+                        '12'   => '12',
+                        '13'   => '13',
+                        '14'   => '14',
+                        '15'   => '15',
+                        '16'   => '16',
+                        '17'   => '17',
+                        '18'   => '18',
+                        '19'   => '19',
+                        '20'   => '20'
                         ),
                         'std' => '1',
                         'group' => 'Banner Type',
@@ -64,7 +74,7 @@ class bs_banner_vc_element extends WPBakeryShortCode {
                         'value' => __( 'Lorem Ipsum', 'bs-banners-domain' ),
                         'dependency'    => array(
                             'element'   => 'style',
-                            'value'     => array('1', '2', '3', '4', '5', '6', '7', '8', '9'),
+                            'value'     => array('1', '2', '3', '4', '5', '6', '7', '8', '9', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'),
                         ),
                         'admin_label' => false,
                         'weight' => 0,
@@ -80,7 +90,7 @@ class bs_banner_vc_element extends WPBakeryShortCode {
                         'value' => __( 'Lorem Ipsum', 'bs-banners-domain' ),
                         'dependency'    => array(
                             'element'   => 'style',
-                            'value'     => array('2', '3', '6', '7', '9'),
+                            'value'     => array('2', '3', '6', '7', '9', '11', '12', '14', '15', '16', '17', '18', '19', '20'),
                         ),
                         'admin_label' => false,
                         'weight' => 0,

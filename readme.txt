@@ -4,11 +4,11 @@ Copyright (C) Albano Toska
 Tags: image hover effects for wpbakery page builder, image caption hover for wpbakery page builder, visual composer image hover effects css3, wpbakery page builder, visual composer, amazing hover effects, best hover effect plugin, css3 animations, css3 hover effect, css3 transition, hover, hover effect, hover effect wordpress plugin, image caption, image caption hover, image hover, pure css3 effects, wp image caption
 Requires at least: 3.5
 Tested up to: 5.2.2
-Stable tag: 2.0.4
+Stable tag: 3.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Wordpress Shortcode that will allow user to add 10 hover effects to images with captions(More to come soon).
+Wordpress Shortcode that will allow user to add 20 hover effects to images with captions(More to come soon).
 
 == Description ==
 
@@ -17,7 +17,7 @@ Wordpress Shortcode that will allow user to add 10 hover effects to images with 
         <strong>BS Banners Plugin for WordPress</strong>
     </p>
 </blockquote>
-BS Banners is a Wordpress plugin that adds 10 different Banners, with Title, description, link and Image. It is also compatible with WPBakery Page Builder(formerly Visual Composer). You can find the element on the builder named "BS Banners". It is compatible with TinyMCE Wordpress Editor. You Should find a button element that adds the shortcode and asks for atributes to be inputed!<br>
+BS Banners is a Wordpress plugin that adds 20 different Banners, with Title, description, link and Image. It is also compatible with WPBakery Page Builder(formerly Visual Composer). You can find the element on the builder named "BS Banners". It is compatible with TinyMCE Wordpress Editor. You Should find a button element that adds the shortcode and asks for atributes to be inputed!<br>
 
 <h3>Quick Links</h3> 
 <ul>
@@ -27,7 +27,7 @@ BS Banners is a Wordpress plugin that adds 10 different Banners, with Title, des
 </ul>
 
 <ul>
-    <li>10 Hover Effects(More to come)</li>
+    <li>20 Hover Effects</li>
     <li>Pure CSS Animations</li>
     <li>WPBakery(formerly Visual Composer) and Elementor full Support</li>
     <li>Super easy Installation</li>
@@ -70,3 +70,7 @@ BS Banners is a Wordpress plugin that adds 10 different Banners, with Title, des
 
 = 2.0.3 =
 * WPBakery conditionals and optimization
+
+= 3.0.0 =
+* 10 New Banners added with awesome effects
+* Optimization of Code

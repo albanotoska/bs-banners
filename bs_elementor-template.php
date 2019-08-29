@@ -99,6 +99,16 @@ class BS_Banner_Elementor_Widget extends \Elementor\Widget_Base {
                     '8' => __( '8', 'bs-banners' ),
                     '9' => __( '9', 'bs-banners' ),
                     '10' => __( '10', 'bs-banners' ),
+                    '11' => __( '11', 'bs-banners' ),
+                    '12' => __( '12', 'bs-banners' ),
+                    '13' => __( '13', 'bs-banners' ),
+                    '14' => __( '14', 'bs-banners' ),
+                    '15' => __( '15', 'bs-banners' ),
+                    '16' => __( '16', 'bs-banners' ),
+                    '17' => __( '17', 'bs-banners' ),
+                    '18' => __( '18', 'bs-banners' ),
+                    '19' => __( '19', 'bs-banners' ),
+                    '20' => __( '20', 'bs-banners' ),
                 ],
                 
     ]
@@ -131,7 +141,7 @@ class BS_Banner_Elementor_Widget extends \Elementor\Widget_Base {
             $this->add_control(
             'title2_banner',
             [
-                'label' => __( 'Description', 'plugin-domain' ),
+                'label' => __( 'Subtitle', 'plugin-domain' ),
                 'type' => \Elementor\Controls_Manager::TEXT,
                 'default' => __( 'Default description', 'plugin-domain' ),
                 'placeholder' => __( 'Type your description here', 'plugin-domain' ),
@@ -139,9 +149,9 @@ class BS_Banner_Elementor_Widget extends \Elementor\Widget_Base {
             'terms' => [
                 [
                     'name' => 'banner_style',
-                    'operator' => 'in',
+                    'operator' => '!in',
                     'value' => [
-                        '2','3', '6', '7', '9'
+                        '1','4', '5', '8', '10', '13'
                     ],
                 ],
             ],
@@ -207,22 +217,53 @@ class BS_Banner_Elementor_Widget extends \Elementor\Widget_Base {
         //IMAGE
         $image = $settings['image']['url'];
 
-        //BANNER CONTENT ?>
+        //BANNER CONTENT 
+        if ( $style!='21') { ?>
         <figure class="bunny-banner bunny-sample-<?php echo $style; ?>">
           <img src="<?php  echo $image; ?>" alt="bunny-sample" />
+          <?php if ($style!='18') { ?>
           <figcaption>
-            <?php if ($style !='10') { ?>
-            <h3><?php echo $title; if($style=='6' || $style=='9') {?><span><?php echo $title2; ?></span></h3>
-            <?php } } if($style=="2" || $style=="3") {?>
-            <h5><?php echo $title2; ?></h5> <?php } if ($style=='7') { ?>
+            <?php if ($style=='16') { ?>
+                <h4><?php echo $title2; ?></h4> <?php
+            }
+            if ($style !='10' && $style !='12') { ?>
+            <h3><?php echo $title; if($style=='6' || $style=='9' || $style=='15') {?><span><?php echo $title2; ?></span>
+            <?php } } ?> </h3> <?php if($style=="2" || $style=="3") {?>
+            <h5><?php echo $title2; ?></h5> <?php } if ($style=='7' || $style=='11' || $style=='17' || $style=='19' || $style=='20') { ?>
                 <p><?php echo $title2; ?></p>
            <?php } if ($style=='10') { ?>
             <div><i class="fa fa-search-plus"></i></div>
-        <?php } ?>
-          </figcaption>
+        <?php }
+            if ($style=="12") { ?>
+                <div><h2><?php echo $title; ?></h2></div>
+                <div><p><?php echo $title2; ?></p></div>
+            <?php } 
+            if ($style=="14") { ?>
+                <div class="left">
+                  <h3><?php echo $title; ?></h3>
+                </div>
+                <div class="right">
+                  <h3 class="white"><?php echo $title2; ?></h3>
+                </div>
+            <?php } ?>
+          </figcaption> <?php } if ($style=='14') {
+            echo '<div class="center"><i class="fa fa-repeat"></i></div>';
+          } ?>
+          <?php if ($style=='17') {
+            echo '<i class="fa fa-link"></i>';
+          } 
+          if ($style=='18') { ?>
+            <div class="title">
+                <div>
+                  <h2><?php echo $title; ?></h2>
+                  <h4><?php echo $title2; ?></h4>
+                </div>
+              </div> <?php
+          } ?>
           <a href="<?php echo $url;?>" <?php echo $target; ?> <?php echo $nofollow; ?>></a>
         </figure>
-        <?php
+        <?php }
+        
 
     }
 

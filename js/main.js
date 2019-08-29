@@ -6,14 +6,14 @@ jQuery(document).ready(function($) {
                 ed.addCommand('bs_banner_insertShortcode', function() {
                     selected = tinyMCE.activeEditor.selection.getContent();
                     
-                     var template = prompt("Choose Banner template(from 1-10)", "1");
-                     if ( template=="1" || template=="4" || template=="5" || template=="8") {
+                     var template = prompt("Choose Banner template(from 1-20)", "1");
+                     if ( template=="1" || template=="4" || template=="5" || template=="8" || template=="13") {
                         var title = prompt("Title of the Banner", "1");
                            var url = prompt("Link of the Banner", "http://");
                            var img = prompt("Image Url of the Banner", "http://");
                            content =  '[bs_banner style="'+template+'" title="'+title+'" url="'+url+'" img="'+img+'"]';
                      }
-                     if ( template=="2" || template=="3" || template=="6" || template=="7" || template=="9") {
+                     if ( template=="2" || template=="3" || template=="6" || template=="7" || template=="9" || template=="11" || template=="12" || template=="14" || template=="15" || template=="16" || template=="17" || template=="18" || template=="19" || template=="20" ) {
                         var title = prompt("Title of the Banner", "1");
                         var title2 = prompt("Short Description of the Banner", "1");
                            var url = prompt("Link of the Banner", "http://");
