@@ -15,6 +15,7 @@ class bs_banner_vc_element extends WPBakeryShortCode {
         add_action( 'vc_before_init', array( $this, 'vc_infobox_mapping' ) );
         add_shortcode( 'bs_banner', 'bs_banner_shortcode' );
     }
+
      
     // Element Mapping
     public function vc_infobox_mapping() {
@@ -78,7 +79,7 @@ class bs_banner_vc_element extends WPBakeryShortCode {
                         ),
                         'admin_label' => false,
                         'weight' => 0,
-                        'group' => 'Styling',
+                        'group' => 'Content',
                     ),  
 
                     array(
@@ -94,7 +95,7 @@ class bs_banner_vc_element extends WPBakeryShortCode {
                         ),
                         'admin_label' => false,
                         'weight' => 0,
-                        'group' => 'Styling',
+                        'group' => 'Content',
                     ),
                      
                     array(
@@ -106,7 +107,7 @@ class bs_banner_vc_element extends WPBakeryShortCode {
                         'description' => __( 'Link of the banner', 'bs-banners-domain' ),
                         'admin_label' => false,
                         'weight' => 0,
-                        'group' => 'Styling',
+                        'group' => 'Content',
                     ), 
                     array(
                         'type' => 'attach_image',
@@ -118,7 +119,7 @@ class bs_banner_vc_element extends WPBakeryShortCode {
                         'description' => __( 'Image of the banner', 'bs-banners-domain' ),
                         'admin_label' => false,
                         'weight' => 0,
-                        'group' => 'Styling',
+                        'group' => 'Content',
                     ),                      
                     array(
 					  'type' => 'checkbox',
@@ -129,8 +130,75 @@ class bs_banner_vc_element extends WPBakeryShortCode {
                                    'Zoom'=>'true'),
 					  'std' => 'zoomed',
 					  'description' => __( 'Add zoom on hover', 'bs-banners-domain' ),
-					  'group' => 'Styling'
-					) 
+					  'group' => 'Content'
+					),
+
+					array(
+					  'type' => 'colorpicker',
+					  'class' => '',
+					  'heading' => __( 'Title Color', 'my-text-domain' ),
+					  'param_name' => 'title_color',
+					  'value' => '', 
+					  'description' => __( 'Main Title Color', 'my-text-domain' ),
+					  'dependency'    => array(
+                            'element'   => 'style',
+                            'value'     => array('1', '2', '3', '4', '5', '6', '7', '8', '9', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'),
+                        ),
+					  'group' => 'Style'
+					),
+
+					array(
+					  'type' => 'textfield',
+					  'class' => '',
+					  'heading' => __( 'Title Font Size', 'my-text-domain' ),
+					  'param_name' => 'title_font',
+					  'value' => '', 
+					  'description' => __( 'Make sure to put the unit in the end. Example : 12px', 'my-text-domain' ),
+					  'dependency'    => array(
+                            'element'   => 'style',
+                            'value'     => array('1', '2', '3', '4', '5', '6', '7', '8', '9', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'),
+                        ),
+					  'group' => 'Style'
+					),
+
+					array(
+					  'type' => 'colorpicker',
+					  'class' => '',
+					  'heading' => __( 'Title 2 Color', 'my-text-domain' ),
+					  'param_name' => 'title2_color',
+					  'value' => '', 
+					  'dependency'    => array(
+                            'element'   => 'style',
+                            'value'     => array('2', '3', '6', '7', '9', '11', '12', '14', '15', '16', '17', '18', '19', '20'),
+                        ),
+					  'description' => __( 'Second Title Color', 'my-text-domain' ),
+					  'group' => 'Style'
+					),
+
+					array(
+					  'type' => 'textfield',
+					  'class' => '',
+					  'heading' => __( 'Second Font Size', 'my-text-domain' ),
+					  'param_name' => 'title2_font',
+					  'value' => '', 
+					  'dependency'    => array(
+                            'element'   => 'style',
+                            'value'     => array('2', '3', '6', '7', '9', '11', '12', '14', '15', '16', '17', '18', '19', '20'),
+                        ),
+					  'description' => __( 'Make sure to put the unit in the end. Example : 12px', 'my-text-domain' ),
+					  'group' => 'Style'
+					),
+
+					array(
+					  'type' => 'colorpicker',
+					  'class' => '',
+					  'heading' => __( 'Accent Color', 'my-text-domain' ),
+					  'param_name' => 'accent_color',
+					  'value' => '', 
+					  'description' => __( 'Other Accents Color', 'my-text-domain' ),
+					  'group' => 'Style'
+					),
+ 
                 ),
             )
         );                                                                                                                                                                                                        

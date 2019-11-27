@@ -197,6 +197,136 @@ class BS_Banner_Elementor_Widget extends \Elementor\Widget_Base {
         
         $this->end_controls_section();
 
+       $this->start_controls_section(
+            'style_section',
+            [
+                'label' => __( 'Style Section', 'plugin-name' ),
+                'tab' => \Elementor\Controls_Manager::TAB_STYLE,
+            ]
+        );
+
+       $this->add_control(
+            'title_color',
+            [
+                'label' => __( 'Title Color', 'plugin-domain' ),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'scheme' => [
+                    'type' => \Elementor\Scheme_Color::get_type(),
+                    'value' => \Elementor\Scheme_Color::COLOR_1,
+                ],
+                'selectors' => [
+                    '{{WRAPPER}}  h2' => 'color: {{VALUE}}',
+                    '{{WRAPPER}}  h3' => 'color: {{VALUE}}',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'title_font',
+             [
+            'label' => _x( 'Title Font-size', 'Typography Control', 'elementor' ),
+            'type' => \Elementor\Controls_Manager::SLIDER,
+            'size_units' => [ 'px', 'em', 'rem', 'vw' ],
+            'range' => [
+                'px' => [
+                    'min' => 1,
+                    'max' => 200,
+                ],
+                'vw' => [
+                    'min' => 0.1,
+                    'max' => 10,
+                    'step' => 0.1,
+                ],
+            ],
+            'responsive' => true,
+            'selectors' => [
+                    '{{WRAPPER}}  h2' => 'font-size: {{SIZE}}{{UNIT}}',
+                    '{{WRAPPER}}  h3' => 'font-size: {{SIZE}}{{UNIT}}',
+                ],
+        ]
+        );
+
+        $this->add_control(
+            'subtitle_color',
+            [
+                'label' => __( 'Subtitle Color', 'plugin-domain' ),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'scheme' => [
+                    'type' => \Elementor\Scheme_Color::get_type(),
+                    'value' => \Elementor\Scheme_Color::COLOR_1,
+                ],
+                'selectors' => [
+                    '{{WRAPPER}}  h4' => 'color: {{VALUE}}',
+                    '{{WRAPPER}}  h5' => 'color: {{VALUE}}',
+                    '{{WRAPPER}}  h3 > span' => 'color: {{VALUE}}',
+                    '{{WRAPPER}}  p' => 'color: {{VALUE}}',
+                    '{{WRAPPER}}  .white' => 'color: {{VALUE}}',
+                ],
+            ]
+        );
+
+
+        $this->add_control(
+            'subtitle_font',
+             [
+            'label' => _x( 'Subtitle Font-size', 'Typography Control', 'elementor' ),
+            'type' => \Elementor\Controls_Manager::SLIDER,
+            'size_units' => [ 'px', 'em', 'rem', 'vw' ],
+            'range' => [
+                'px' => [
+                    'min' => 1,
+                    'max' => 200,
+                ],
+                'vw' => [
+                    'min' => 0.1,
+                    'max' => 10,
+                    'step' => 0.1,
+                ],
+            ],
+            'responsive' => true,
+            'selectors' => [
+                    '{{WRAPPER}}  h4' => 'font-size: {{SIZE}}{{UNIT}}',
+                    '{{WRAPPER}}  h5' => 'font-size: {{SIZE}}{{UNIT}}',
+                    '{{WRAPPER}}  h3 > span' => 'font-size: {{SIZE}}{{UNIT}}',
+                    '{{WRAPPER}}  p' => 'font-size: {{SIZE}}{{UNIT}}',
+                    '{{WRAPPER}}  .white' => 'font-size: {{SIZE}}{{UNIT}}',
+                ],
+        ]
+        );
+
+
+        $this->add_control(
+            'accent_color',
+            [
+                'label' => __( 'Accent Color', 'plugin-domain' ),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'scheme' => [
+                    'type' => \Elementor\Scheme_Color::get_type(),
+                    'value' => \Elementor\Scheme_Color::COLOR_1,
+                ],
+                'selectors' => [
+                    '{{WRAPPER}}  .bunny-banner.bunny-sample-1 h3' => 'background-color: {{VALUE}}',
+                    '{{WRAPPER}}  .bunny-banner.bunny-sample-3 h5' => 'background-color: {{VALUE}}',
+                    '{{WRAPPER}}  .bunny-sample-6:after' => 'background-color: {{VALUE}}',
+                    '{{WRAPPER}}  .bunny-sample-7:before, .bunny-sample-7:after' => 'background-color: {{VALUE}}',
+                    '{{WRAPPER}}  .bunny-sample-7 figcaption:before, .bunny-sample-7 figcaption:after' => 'background-color: {{VALUE}}',
+                    '{{WRAPPER}}  .bunny-sample-8' => 'background-color: {{VALUE}}',
+                    '{{WRAPPER}}  .bunny-sample-9:after' => 'background-color: {{VALUE}}',
+                    '{{WRAPPER}}  .bunny-sample-13:after' => 'border-color: transparent transparent transparent {{VALUE}}',
+                    '{{WRAPPER}}  .bunny-sample-13:before' => 'background-color: {{VALUE}}',
+                    '{{WRAPPER}}  figure.bunny-sample-16:after' => 'background-color: {{VALUE}}',
+                    '{{WRAPPER}}  figure.bunny-sample-18 h4' => 'background-color: {{VALUE}}',
+                    '{{WRAPPER}}  .bunny-sample-17 figcaption' => 'background-color: {{VALUE}}',
+                    '{{WRAPPER}}  .bunny-sample-17:after' => 'border-color: {{VALUE}} transparent transparent transparent',
+                    '{{WRAPPER}}  .bunny-sample-17 figcaption:before' => 'border-color: transparent {{VALUE}} transparent transparent',
+                    
+                ],
+            ]
+        );
+
+
+       $this->end_controls_section();
+
     }
 
     /**
