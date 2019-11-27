@@ -12,7 +12,7 @@ class bs_banner_vc_element extends WPBakeryShortCode {
     // Element Init
     
     function __construct() {
-        add_action( 'init', array( $this, 'vc_infobox_mapping' ) );
+        add_action( 'vc_before_init', array( $this, 'vc_infobox_mapping' ) );
         add_shortcode( 'bs_banner', 'bs_banner_shortcode' );
     }
      
@@ -120,7 +120,17 @@ class bs_banner_vc_element extends WPBakeryShortCode {
                         'weight' => 0,
                         'group' => 'Styling',
                     ),                      
-                        
+                    array(
+					  'type' => 'checkbox',
+					  'class' => '',
+					  'heading' => __( 'Add Zoom', 'bs-banners-domain' ),
+					  'param_name' => 'zoomimg',
+					  'value' => array(
+                                   'Zoom'=>'true'),
+					  'std' => 'zoomed',
+					  'description' => __( 'Add zoom on hover', 'bs-banners-domain' ),
+					  'group' => 'Styling'
+					) 
                 ),
             )
         );                                                                                                                                                                                                        

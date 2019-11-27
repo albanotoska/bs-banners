@@ -3,7 +3,7 @@
  * Plugin Name: BS Banners
  * Description: 20 Different banner style shortcodes, with awesome effects. Compatible with Visual Composer(WPBakery), Elementor and Wordpress editor. Just add shortcode [bs_banner style="" title="" title2="" url="" img=""], or simply add the element via Visual Composer or Elementor.
  * Plugin URI: https://albanotoska.com/bsbanners/
- * Version: 3.0.1
+ * Version: 3.2.5
  * Author: Albano Toska
  * Author URI: http://www.albanotoska.com
  * License:     GPL2
@@ -19,11 +19,13 @@ function bs_banner_shortcode( $atts ) {
                        'title' => 'Lorem Ipsum',
                        'title2' => 'Dolor sit amet',
                        'url' => '',
-                       'img' => ''
+                       'img' => '',
+                       'zoomimg' => ''
                ),
                $atts
        ));
     $image_src = $img;
+    $checkbox = $zoomimg;
      if (is_numeric($img)) {
             $image_src = wp_get_attachment_url($img);
         }
@@ -122,7 +124,7 @@ function bs_banner_shortcodeonTINYMCE($buttons) {
 
 /* VISUAL COMPOSER COMPATIBILITY */
 // Before VC Init
-add_action( 'vc_before_init', 'bs_vcbanner_before_init_actions' );
+add_action( 'vc_before_init', 'bs_vcbanner_before_init_actions', 1 );
  
 function bs_vcbanner_before_init_actions() {
     // Require new custom Element
@@ -162,13 +164,13 @@ function bs_vcbanner_element_style() {
 
 add_action('wp_enqueue_scripts', 'bs_banner_shortcode_scripts');
 function bs_banner_shortcode_scripts() {
-	//CSS LOADING
+  //CSS LOADING
     wp_register_style('bs_banner_shortcode_style', plugins_url('css/style.css',__FILE__ ));
     wp_enqueue_style('bs_banner_shortcode_style');
 
-    //JS & JQUERY LOADING
-    wp_register_script( 'bs_banner_shortcode_jsscripts', plugins_url('js/main.js',__FILE__ ));
-    wp_enqueue_script('bs_banner_shortcode_jsscripts');
+    //JS & JQUERY LOADING NOT NEEDED, ONLY CALLED IF IS INSIDE CLASSIC EDITOR
+   // wp_register_script( 'bs_banner_shortcode_jsscripts', plugins_url('js/main.js',__FILE__ ));
+   // wp_enqueue_script('bs_banner_shortcode_jsscripts');
     /* FONT AWESOME */
      wp_register_style( 'bs_banner_shortcode_fontawesome_script', 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
     wp_enqueue_style('bs_banner_shortcode_fontawesome_script');

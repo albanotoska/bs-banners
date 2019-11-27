@@ -183,7 +183,17 @@ class BS_Banner_Elementor_Widget extends \Elementor\Widget_Base {
                     'url' => \Elementor\Utils::get_placeholder_image_src(),
                 ],
             ]
-        );   
+        ); 
+
+        $this->add_control(
+            'add_zoom',
+            [
+                'label' => __( 'Add Zoom Effect on Hover', 'plugin-domain' ),
+                'type' => \Elementor\Controls_Manager::SWITCHER,
+                'default' => __( 'Add Zoom', 'plugin-domain' ),                
+             
+        ]
+        );  
         
         $this->end_controls_section();
 
@@ -217,10 +227,13 @@ class BS_Banner_Elementor_Widget extends \Elementor\Widget_Base {
         //IMAGE
         $image = $settings['image']['url'];
 
+        //IMAGE ZOOM
+
+
         //BANNER CONTENT 
         if ( $style!='21') { ?>
         <figure class="bunny-banner bunny-sample-<?php echo $style; ?>">
-          <img src="<?php  echo $image; ?>" alt="bunny-sample" />
+          <img src="<?php  echo $image; ?>" alt="bunny-sample" <?php if('yes'===$settings['add_zoom']) {?>class="add_zoom" <?php } ?>  />
           <?php if ($style!='18') { ?>
           <figcaption>
             <?php if ($style=='16') { ?>

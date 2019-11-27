@@ -13,7 +13,6 @@
   display: inline-block;
   font-size: 16px;
   margin: 10px;
-  max-width: 315px;
   min-width: 230px;
   overflow: hidden;
   position: relative;
@@ -84,7 +83,6 @@
   overflow: hidden;
   margin: 10px;
   min-width: 250px;
-  max-width: 310px;
   width: 100%;
   background-color: #000000;
   color: #ffffff;
@@ -155,7 +153,6 @@
   overflow: hidden;
   margin: 10px;
   min-width: 230px;
-  max-width: 315px;
   width: 100%;
   color: #ffffff;
   font-size: 16px;
@@ -265,7 +262,6 @@
   display: inline-block;
   font-size: 16px;
   margin: 10px;
-  max-width: 315px;
   min-width: 230px;
   overflow: hidden;
   position: relative;
@@ -378,7 +374,6 @@
   overflow: hidden;
   margin: 10px;
   min-width: 230px;
-  max-width: 315px;
   width: 100%;
   color: #000000;
   text-align: left;
@@ -488,7 +483,6 @@
   display: inline-block;
   font-size: 24px;
   margin: 8px;
-  max-width: 315px;
   min-width: 230px;
   overflow: hidden;
   position: relative;
@@ -585,7 +579,6 @@
   display: inline-block;
   font-size: 16px;
   margin: 10px 5px;
-  max-width: 315px;
   min-width: 230px;
   overflow: hidden;
   position: relative;
@@ -743,7 +736,6 @@
   display: inline-block;
   font-size: 16px;
   margin: 10px;
-  max-width: 315px;
   min-width: 230px;
   overflow: hidden;
   position: relative;
@@ -841,7 +833,6 @@
   color: #ffffff;
   font-size: 16px;
   margin: 10px;
-  max-width: 315px;
   min-width: 230px;
   overflow: hidden;
   position: relative;
@@ -936,7 +927,6 @@
   overflow: hidden;
   margin: 10px;
   min-width: 230px;
-  max-width: 315px;
   width: 100%;
   color: #ffffff;
   font-size: 16px;
@@ -1084,7 +1074,6 @@ figure.bunny-sample-11 {
   overflow: hidden;
   margin: 10px;
   min-width: 230px;
-  max-width: 315px;
   width: 100%;
   color: #ffffff;
   text-align: center;
@@ -1168,8 +1157,6 @@ figure.bunny-sample-12 {
   overflow: hidden;
   margin: 10px;
   min-width: 220px;
-  max-width: 310px;
-  max-height: 220px;
   width: 100%;
   background: #000000;
   text-align: center;
@@ -1294,7 +1281,6 @@ figure.bunny-sample-12:hover figcaption::before {
   overflow: hidden;
   margin: 10px;
   min-width: 230px;
-  max-width: 315px;
   width: 100%;
   color: #ffffff;
   text-align: center;
@@ -1425,8 +1411,6 @@ figure.bunny-sample-14 {
   overflow: hidden;
   margin: 10px;
   min-width: 220px;
-  max-width: 310px;
-  max-height: 220px;
   width: 100%;
   background: #000000;
 }
@@ -1562,8 +1546,6 @@ figure.bunny-sample-15 {
   display: inline-block;
   margin: 10px;
   min-width: 220px;
-  max-width: 310px;
-  max-height: 310px;
   width: 100%;
   overflow: hidden;
   text-align: center;
@@ -1684,7 +1666,6 @@ figure.bunny-sample-16 {
   overflow: hidden;
   margin: 10px;
   min-width: 230px;
-  max-width: 315px;
   width: 100%;
   color: #000000;
   text-align: center;
@@ -1770,8 +1751,6 @@ figure.bunny-sample-16.hover:after {
   overflow: hidden;
   margin: 10px;
   min-width: 230px;
-  max-width: 315px;
-  max-height: 220px;
   width: 100%;
   color: #000000;
   text-align: right;
@@ -1887,7 +1866,6 @@ figure.bunny-sample-18 {
   overflow: hidden;
   margin: 10px;
   min-width: 230px;
-  max-width: 315px;
   width: 100%;
   color: #ffffff;
   text-align: center;
@@ -1961,7 +1939,6 @@ figure.bunny-sample-18 h4 {
 }
 figure.bunny-sample-18 h2 {
   font-weight: 400;
-  color: #fff;
 }
 figure.bunny-sample-18 h4 {
   display: block;
@@ -2029,8 +2006,6 @@ figure.bunny-sample-19 {
   overflow: hidden;
   margin: 10px;
   min-width: 220px;
-  max-width: 310px;
-  max-height: 220px;
   width: 100%;
   background: #000000;
   text-align: left;
@@ -2136,8 +2111,6 @@ figure.bunny-sample-20 {
   overflow: hidden;
   margin: 10px;
   min-width: 220px;
-  max-width: 310px;
-  max-height: 220px;
   width: 100%;
   color: #000000;
   text-align: center;
@@ -2224,4 +2197,13 @@ figure.bunny-sample-20.hover figcaption h3 {
 figure.bunny-sample-20:hover figcaption p,
 figure.bunny-sample-20.hover figcaption p {
   opacity: 0.7;
+}
+
+/* ZOOM EFFECT */
+.bunny-banner:hover .add_zoom {
+	transform: scale(1.2);
+	transition: 400ms all;
+}
+.bunny-banner .add_zoom {
+	transition: 400ms all;
 }

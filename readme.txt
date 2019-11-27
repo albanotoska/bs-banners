@@ -3,8 +3,8 @@ Contributors: albanotoska
 Copyright (C) Albano Toska
 Tags: image hover effects for wpbakery page builder, image caption hover for wpbakery page builder, visual composer image hover effects css3, wpbakery page builder, visual composer, amazing hover effects, best hover effect plugin, css3 animations, css3 hover effect, css3 transition, hover, hover effect, hover effect wordpress plugin, image caption, image caption hover, image hover, pure css3 effects, wp image caption
 Requires at least: 3.5
-Tested up to: 5.2.2
-Stable tag: 3.0.1
+Tested up to: 5.3
+Stable tag: 3.2.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -75,6 +75,28 @@ BS Banners is a Wordpress plugin that adds 20 different Banners, with Title, des
 * 10 New Banners added with awesome effects
 * Optimization of Code
 
-== 3.0.1 =
+= 3.0.1 =
 * Fixed Some Styling
 * New Plugin URI
+
+= 3.0.2 =
+* Removed max-width and max-height from styling
+
+= 3.1.0 =
+* Added zoom option on hover
+
+= 3.1.1 =
+* Bug Fixes
+
+= 3.2.0 =
+* Visual Composer Hooks changes
+* Bug Fixes
+
+= 3.2.2 =
+* Visual Composer Hooks for integrated themes
+
+= 3.2.4 =
+* Bug Fixes
+
+= 3.2.5 =
+* Compatibility with Wordpress 5.3
