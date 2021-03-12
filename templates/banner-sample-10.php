@@ -15,5 +15,5 @@ $a_target = $atts['link']['target'];
   <figcaption>
     <div><i class="fa fa-search-plus"></i></div>
   </figcaption>
-    <a href="<?php if ( $post && preg_match( '/vc_row/', $post->post_content ) ) { echo $a_href; } else { echo $url; }  ?>" target="<?php echo $a_target; ?>"></a>
+    <a <?php if($url) { ?> href="<?php if ( $post && preg_match( '/vc_row/', $post->post_content ) ) { echo $a_href; } else { echo $url; }  ?>"<?php }?> target="<?php echo $a_target; ?>"></a>
 </figure>

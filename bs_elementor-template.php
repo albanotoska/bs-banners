@@ -111,40 +111,40 @@ class BS_Banner_Elementor_Widget extends \Elementor\Widget_Base {
                     '20' => __( '20', 'bs-banners' ),
                 ],
                 
-    ]
-);
+            ]
+        );
             
         
 
         $this->add_control(
             'title1_banner',
             [
-                'label' => __( 'Title', 'plugin-domain' ),
+                'label' => __( 'Title', 'bs-banners' ),
                 'type' => \Elementor\Controls_Manager::TEXT,
-                'default' => __( 'Default title', 'plugin-domain' ),
-                'placeholder' => __( 'Type your title here', 'plugin-domain' ),
+                'default' => __( 'Default title', 'bs-banners' ),
+                'placeholder' => __( 'Type your title here', 'bs-banners' ),
             
             'conditions' => [
-            'terms' => [
-                [
-                    'name' => 'banner_style',
-                    'operator' => '!in',
-                    'value' => [
-                        '10'
+                'terms' => [
+                    [
+                        'name' => 'banner_style',
+                        'operator' => '!in',
+                        'value' => [
+                            '10'
+                            ],
                         ],
                     ],
-                ],
-            ], 
-        ]
+                ], 
+            ]
         );
 
-            $this->add_control(
+        $this->add_control(
             'title2_banner',
             [
-                'label' => __( 'Subtitle', 'plugin-domain' ),
+                'label' => __( 'Subtitle', 'bs-banners' ),
                 'type' => \Elementor\Controls_Manager::TEXT,
-                'default' => __( 'Default description', 'plugin-domain' ),
-                'placeholder' => __( 'Type your description here', 'plugin-domain' ),
+                'default' => __( 'Default description', 'bs-banners' ),
+                'placeholder' => __( 'Type your description here', 'bs-banners' ),
                 'conditions' => [
             'terms' => [
                 [
@@ -159,12 +159,12 @@ class BS_Banner_Elementor_Widget extends \Elementor\Widget_Base {
             ]
         );
 
-            $this->add_control(
+        $this->add_control(
             'url',
             [
-                'label' => __( 'Link', 'plugin-domain' ),
+                'label' => __( 'Link', 'bs-banners' ),
                 'type' => \Elementor\Controls_Manager::URL,
-                'placeholder' => __( 'https://your-link.com', 'plugin-domain' ),
+                'placeholder' => __( 'https://your-link.com', 'bs-banners' ),
                 'show_external' => true,
                 'default' => [
                     'url' => '',
@@ -174,10 +174,10 @@ class BS_Banner_Elementor_Widget extends \Elementor\Widget_Base {
             ]
         );
 
-            $this->add_control(
+        $this->add_control(
             'image',
             [
-                'label' => __( 'Choose Image', 'plugin-domain' ),
+                'label' => __( 'Choose Image', 'bs-banners' ),
                 'type' => \Elementor\Controls_Manager::MEDIA,
                 'default' => [
                     'url' => \Elementor\Utils::get_placeholder_image_src(),
@@ -188,9 +188,9 @@ class BS_Banner_Elementor_Widget extends \Elementor\Widget_Base {
         $this->add_control(
             'add_zoom',
             [
-                'label' => __( 'Add Zoom Effect on Hover', 'plugin-domain' ),
+                'label' => __( 'Add Zoom Effect on Hover', 'bs-banners' ),
                 'type' => \Elementor\Controls_Manager::SWITCHER,
-                'default' => __( 'Add Zoom', 'plugin-domain' ),                
+                'default' => __( 'Add Zoom', 'bs-banners' ),                
              
         ]
         );  
@@ -204,11 +204,28 @@ class BS_Banner_Elementor_Widget extends \Elementor\Widget_Base {
                 'tab' => \Elementor\Controls_Manager::TAB_STYLE,
             ]
         );
-
-       $this->add_control(
-            'title_color',
+       $this->add_group_control(
+            \Elementor\Group_Control_Typography::get_type(),
             [
-                'label' => __( 'Title Color', 'plugin-domain' ),
+                'name' => 'title_typography',
+                'label' => __( 'Title Typography', 'bs-banners' ),
+                'selector' => '{{WRAPPER}} h3, {{WRAPPER}} h2', 
+            ]
+        );
+
+    $this->start_controls_tabs( 'tabs_title_style' );
+
+    $this->start_controls_tab(
+      'tab_title_normal',
+      [
+        'label' => __( 'Normal', 'elementor' ),
+      ]
+    );
+
+    $this->add_control(
+      'title_color',
+            [
+                'label' => __( 'Title Color', 'bs-banners' ),
                 'type' => \Elementor\Controls_Manager::COLOR,
                 'scheme' => [
                     'type' => \Elementor\Scheme_Color::get_type(),
@@ -219,37 +236,66 @@ class BS_Banner_Elementor_Widget extends \Elementor\Widget_Base {
                     '{{WRAPPER}}  h3' => 'color: {{VALUE}}',
                 ],
             ]
+    );
+
+    $this->end_controls_tab();
+
+    $this->start_controls_tab(
+      'tab_title_hover',
+      [
+        'label' => __( 'Hover', 'elementor' ),
+      ]
+    );
+
+    $this->add_control(
+            'title_color_hover',
+            [
+                'label' => __( 'Title Color Hover', 'bs-banners' ),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'scheme' => [
+                    'type' => \Elementor\Scheme_Color::get_type(),
+                    'value' => \Elementor\Scheme_Color::COLOR_1,
+                ],
+                'selectors' => [
+                    '{{WRAPPER}}:hover  h2' => 'color: {{VALUE}}',
+                    '{{WRAPPER}}:hover  h3' => 'color: {{VALUE}}',
+                ],
+            ]
         );
 
-        $this->add_control(
-            'title_font',
-             [
-            'label' => _x( 'Title Font-size', 'Typography Control', 'elementor' ),
-            'type' => \Elementor\Controls_Manager::SLIDER,
-            'size_units' => [ 'px', 'em', 'rem', 'vw' ],
-            'range' => [
-                'px' => [
-                    'min' => 1,
-                    'max' => 200,
-                ],
-                'vw' => [
-                    'min' => 0.1,
-                    'max' => 10,
-                    'step' => 0.1,
-                ],
-            ],
-            'responsive' => true,
-            'selectors' => [
-                    '{{WRAPPER}}  h2' => 'font-size: {{SIZE}}{{UNIT}}',
-                    '{{WRAPPER}}  h3' => 'font-size: {{SIZE}}{{UNIT}}',
-                ],
-        ]
+    $this->end_controls_tab();
+
+    $this->end_controls_tabs();
+
+    $this->add_control(
+      'hr_title',
+      [
+        'type' => \Elementor\Controls_Manager::DIVIDER,
+      ]
+    );
+
+        $this->add_group_control(
+            \Elementor\Group_Control_Typography::get_type(),
+            [
+                'name' => 'subtitle_typography',
+                'label' => __( 'Subtitle Typography', 'bs-banners' ),
+                'selector' => '{{WRAPPER}} h4, {{WRAPPER}} h5, {{WRAPPER}} h3>span, {{WRAPPER}} p, {{WRAPPER}} .white', 
+            ]
         );
 
-        $this->add_control(
+        $this->start_controls_tabs( 'tabs_subtitle_style' );
+
+    $this->start_controls_tab(
+      'tab_subtitle_normal',
+      [
+        'label' => __( 'Normal', 'elementor' ),
+      ]
+    );
+
+    $this->add_control(
             'subtitle_color',
             [
-                'label' => __( 'Subtitle Color', 'plugin-domain' ),
+                'label' => __( 'Subtitle Color', 'bs-banners' ),
                 'type' => \Elementor\Controls_Manager::COLOR,
                 'scheme' => [
                     'type' => \Elementor\Scheme_Color::get_type(),
@@ -265,40 +311,59 @@ class BS_Banner_Elementor_Widget extends \Elementor\Widget_Base {
             ]
         );
 
+    $this->end_controls_tab();
 
-        $this->add_control(
-            'subtitle_font',
-             [
-            'label' => _x( 'Subtitle Font-size', 'Typography Control', 'elementor' ),
-            'type' => \Elementor\Controls_Manager::SLIDER,
-            'size_units' => [ 'px', 'em', 'rem', 'vw' ],
-            'range' => [
-                'px' => [
-                    'min' => 1,
-                    'max' => 200,
+    $this->start_controls_tab(
+      'tab_subtitle_hover',
+      [
+        'label' => __( 'Hover', 'elementor' ),
+      ]
+    );
+
+    $this->add_control(
+            'subtitle_color_hover',
+            [
+                'label' => __( 'Subtitle Color Hover', 'bs-banners' ),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'scheme' => [
+                    'type' => \Elementor\Scheme_Color::get_type(),
+                    'value' => \Elementor\Scheme_Color::COLOR_1,
                 ],
-                'vw' => [
-                    'min' => 0.1,
-                    'max' => 10,
-                    'step' => 0.1,
+                'selectors' => [
+                    '{{WRAPPER}}:hover  h4' => 'color: {{VALUE}}',
+                    '{{WRAPPER}}:hover  h5' => 'color: {{VALUE}}',
+                    '{{WRAPPER}}:hover  h3 > span' => 'color: {{VALUE}}',
+                    '{{WRAPPER}}:hover  p' => 'color: {{VALUE}}',
+                    '{{WRAPPER}}:hover  .white' => 'color: {{VALUE}}',
                 ],
-            ],
-            'responsive' => true,
-            'selectors' => [
-                    '{{WRAPPER}}  h4' => 'font-size: {{SIZE}}{{UNIT}}',
-                    '{{WRAPPER}}  h5' => 'font-size: {{SIZE}}{{UNIT}}',
-                    '{{WRAPPER}}  h3 > span' => 'font-size: {{SIZE}}{{UNIT}}',
-                    '{{WRAPPER}}  p' => 'font-size: {{SIZE}}{{UNIT}}',
-                    '{{WRAPPER}}  .white' => 'font-size: {{SIZE}}{{UNIT}}',
-                ],
-        ]
+            ]
         );
 
+        
+    $this->end_controls_tab();
 
-        $this->add_control(
+    $this->end_controls_tabs();
+
+    $this->add_control(
+      'hr_subtitle',
+      [
+        'type' => \Elementor\Controls_Manager::DIVIDER,
+      ]
+    );
+
+    $this->start_controls_tabs( 'tabs_accent_style' );
+
+    $this->start_controls_tab(
+      'tab_accent_normal',
+      [
+        'label' => __( 'Normal', 'elementor' ),
+      ]
+    );
+
+    $this->add_control(
             'accent_color',
             [
-                'label' => __( 'Accent Color', 'plugin-domain' ),
+                'label' => __( 'Accent Color', 'bs-banners' ),
                 'type' => \Elementor\Controls_Manager::COLOR,
                 'scheme' => [
                     'type' => \Elementor\Scheme_Color::get_type(),
@@ -324,8 +389,49 @@ class BS_Banner_Elementor_Widget extends \Elementor\Widget_Base {
             ]
         );
 
+    $this->end_controls_tab();
 
-       $this->end_controls_section();
+    $this->start_controls_tab(
+      'tab_accent_hover',
+      [
+        'label' => __( 'Hover', 'elementor' ),
+      ]
+    );
+
+    $this->add_control(
+            'accent_color_hover',
+            [
+                'label' => __( 'Accent Color Hover', 'bs-banners' ),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'scheme' => [
+                    'type' => \Elementor\Scheme_Color::get_type(),
+                    'value' => \Elementor\Scheme_Color::COLOR_1,
+                ],
+                'selectors' => [
+                    '{{WRAPPER}}:hover  .bunny-banner.bunny-sample-1 h3' => 'background-color: {{VALUE}}',
+                    '{{WRAPPER}}:hover  .bunny-banner.bunny-sample-3 h5' => 'background-color: {{VALUE}}',
+                    '{{WRAPPER}}:hover  .bunny-sample-6:after' => 'background-color: {{VALUE}}',
+                    '{{WRAPPER}}:hover  .bunny-sample-7:before, .bunny-sample-7:after' => 'background-color: {{VALUE}}',
+                    '{{WRAPPER}}:hover  .bunny-sample-7 figcaption:before, .bunny-sample-7 figcaption:after' => 'background-color: {{VALUE}}',
+                    '{{WRAPPER}}:hover  .bunny-sample-8' => 'background-color: {{VALUE}}',
+                    '{{WRAPPER}}:hover  .bunny-sample-9:after' => 'background-color: {{VALUE}}',
+                    '{{WRAPPER}}:hover  .bunny-sample-13:after' => 'border-color: transparent transparent transparent {{VALUE}}',
+                    '{{WRAPPER}}:hover  .bunny-sample-13:before' => 'background-color: {{VALUE}}',
+                    '{{WRAPPER}}:hover  figure.bunny-sample-16:after' => 'background-color: {{VALUE}}',
+                    '{{WRAPPER}}:hover  figure.bunny-sample-18 h4' => 'background-color: {{VALUE}}',
+                    '{{WRAPPER}}:hover  .bunny-sample-17 figcaption' => 'background-color: {{VALUE}}',
+                    '{{WRAPPER}}:hover  .bunny-sample-17:after' => 'border-color: {{VALUE}} transparent transparent transparent',
+                    '{{WRAPPER}}:hover  .bunny-sample-17 figcaption:before' => 'border-color: transparent {{VALUE}} transparent transparent',
+                    
+                ],
+            ]
+        );
+
+    $this->end_controls_tab();
+
+    $this->end_controls_tabs();
+
+        $this->end_controls_section();
 
     }
 

@@ -41,5 +41,5 @@ $accentcolor = $atts['accent_color'];
   <figcaption>
      <!-- <p>Description to be added soon</p> -->
   </figcaption>
-   <a href="<?php if ( $post && preg_match( '/vc_row/', $post->post_content ) ) { echo $a_href; } else { echo $url; }  ?>" target="<?php echo $a_target; ?>"></a>
+   <a <?php if($url) { ?> href="<?php if ( $post && preg_match( '/vc_row/', $post->post_content ) ) { echo $a_href; } else { echo $url; }  ?>"<?php }?> target="<?php echo $a_target; ?>"></a>
 </figure>
