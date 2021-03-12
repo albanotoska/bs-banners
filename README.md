@@ -19,6 +19,7 @@ BS Banners is a Wordpress plugin that adds 20 different Banners, with Title, des
     <li><a href="https://albanotoska.com/bsbanners/">Demo (Features)</a></li>
     <li><a href="https://albanotoska.com/#contact">Contact Us</a></li>
     <li><a href="https://wordpress.org/plugins/bs-banners/">Plugin on Wordpress.org</a></li>
+    <li><a href="https://wordpress.org/plugins/math-captcha-for-elementor-forms/">My other plugin on Wordpress.org</a></li>
 </ul>
 <br>
 <ul>
